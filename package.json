@@ -1,0 +1,21 @@
+{
+  "name": "json-to-graphql",
+  "version": "1.0.0",
+  "description": "Turn any JSON file into a queryable GraphQL API!",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha __tests__"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "graphql": "^0.6.0",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "js-beautify": "^1.6.3",
+    "node-fetch": "^1.5.3"
+  }
+}
