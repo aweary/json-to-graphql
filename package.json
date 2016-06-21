@@ -1,10 +1,12 @@
 {
-  "name": "json-to-graphql-schema",
-  "version": "1.0.0",
+  "name": "json-to-graphql",
+  "version": "0.1.1",
   "description": "Turn any JSON file into a queryable GraphQL API!",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "babel-node __tests__/index.js"
+    "test": "babel-node __tests__/index.js",
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build"
   },
   "keywords": [],
   "author": "",
