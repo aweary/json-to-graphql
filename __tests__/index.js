@@ -1,4 +1,6 @@
-const schemaFromJSON = require('../index');
+const createSchemaFromJSON = require('../src');
 const json = require('./api.js');
 
-schemaFromJSON(json)
+console.log(
+  createSchemaFromJSON(json)
+)

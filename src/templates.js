@@ -8,6 +8,7 @@ const {
   GraphQLObjectType,
   GraphQLSchema,
   GraphQLID,
+  GraphQLNonNull
 } = require('graphql')
 
 ${types.join('\n')}
@@ -20,21 +21,33 @@ module.exports = new GraphQLSchema({
 })
 `
 
-const typeTemplate = (name, fields) => `
-const ${name}Type = new GraphQLObjectType({
+const queryTemplateWithArgs = (
+  name,     // field name
+  type,     // GraphQL Type
+  args,     // mapped args
+  resolve   // resolve method
+) => `
+  ${name}: {
+    type: ${type},
+    args: {${args}},
+    resolve: ${resolve}
+  }
+`
+
+const typeTemplate = (type, name, fields) => `
+const ${type} = new GraphQLObjectType({
   name: '${name}',
   fields: {${fields}},
 });
 `
 
-const scalarTypeTemplate = (name, value, type) => {
-  value = value === value ? `'${value}'` : value;
+const scalarTypeTemplate = (name, type) => {
   return `
     ${name}: {
       description: 'enter your description',
       type: ${type},
       // TODO: Implement resolver for ${name}
-      resolve: () => ${value},
+      resolve: () => null,
     }
   `
 }
@@ -61,4 +74,5 @@ module.exports = {
   scalarTypeTemplate,
   scalarTypeTemplateWithoutResolve,
   objectTypeTemplate,
+  queryTemplateWithArgs,
 }
