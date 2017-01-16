@@ -1,8 +1,7 @@
 // @flow
-'use strict';
-const fs = require('fs');
-const fetch = require('node-fetch');
-const beautify = require('js-beautify');
+import fs from 'fs';
+import fetch from 'node-fetch';
+import beautify from 'js-beautify';
 import invariant from 'invariant';
 
 export type NativeType = string;
