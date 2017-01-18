@@ -1,0 +1,82 @@
+exports[`main create create a schema from simple JSON 1`] = `
+"const {
+    GraphQLBoolean,
+    GraphQLString,
+    GraphQLInt,
+    GraphQLFloat,
+    GraphQLObjectType,
+    GraphQLSchema,
+    GraphQLID,
+    GraphQLNonNull
+} = require(\'graphql\')
+
+
+const JobType = new GraphQLObjectType({
+    name: \'job\',
+    fields: {
+        type: {
+            description: \'enter your description\',
+            type: new GraphQLNonNull(GraphQLString),
+            // TODO: Implement resolver for type
+            resolve: () => null,
+        },
+        years: {
+            description: \'enter your description\',
+            type: new GraphQLNonNull(GraphQLInt),
+            // TODO: Implement resolver for years
+            resolve: () => null,
+        }
+    },
+});
+
+
+module.exports = new GraphQLSchema({
+    query: new GraphQLObjectType({
+        name: \'RootQueryType\',
+        fields: () => ({
+            name: {
+                description: \'enter your description\',
+                type: new GraphQLNonNull(GraphQLString),
+                // TODO: Implement resolver for name
+                resolve: () => null,
+            },
+            id: {
+                description: \'enter your description\',
+                type: new GraphQLNonNull(GraphQLID),
+                // TODO: Implement resolver for id
+                resolve: () => null,
+            },
+            favorite_color: {
+                description: \'enter your description\',
+                type: new GraphQLNonNull(GraphQLString),
+                // TODO: Implement resolver for favorite_color
+                resolve: () => null,
+            },
+            type: {
+                description: \'enter your description\',
+                type: new GraphQLNonNull(GraphQLString),
+                // TODO: Implement resolver for type
+                resolve: () => null,
+            },
+            years: {
+                description: \'enter your description\',
+                type: new GraphQLNonNull(GraphQLInt),
+                // TODO: Implement resolver for years
+                resolve: () => null,
+            },
+            job: {
+                description: \'enter your description\',
+                type: new GraphQLNonNull(JobType),
+                // TODO: Implement resolver for job
+                resolve: () => null,
+            },
+            dogs: {
+                description: \'enter your description\',
+                type: new GraphQLNonNull(new GraphQLList(GraphQLString)),
+                // TODO: Implement resolver for dogs
+                resolve: () => null,
+            }
+        })
+    })
+})"
+`;
