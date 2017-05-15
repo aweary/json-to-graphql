@@ -1,0 +1,16 @@
+{
+  "name": "json-to-graphql-generator",
+  "version": "1.0.0",
+  "description": "Generate GraphQl Schema from JSON data file",
+  "main": "index.js",
+  "dependencies": {
+    "json-to-graphql": "^0.1.1",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikhil Dwivedi",
+  "license": "ISC"
+}
