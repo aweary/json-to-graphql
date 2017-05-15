@@ -4,12 +4,12 @@
   "description": "Generate GraphQl Schema from JSON data file",
   "main": "index.js",
   "dependencies": {
-    "json-to-graphql": "^0.1.1",
-    "nodemon": "^1.11.0"
+    "json-to-graphql": "^0.1.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node index.js"
   },
   "author": "Nikhil Dwivedi",
   "license": "ISC"
