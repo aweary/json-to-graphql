@@ -1,3 +1,10 @@
+# DEPRECATED
+
+```diff
+-- This project is no longer maintained and has fallen severely out of sync with the
+-- GraphQL community. Don't use it at all.
+```
+
 # json-to-graphql
 
 > Generates a GraphQL schema file based on any JSON data
