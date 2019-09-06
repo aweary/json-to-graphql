@@ -5,6 +5,8 @@
 -- GraphQL community. Don't use it at all.
 ```
 
+Alternatives: https://graphback.dev
+
 # json-to-graphql
 
 > Generates a GraphQL schema file based on any JSON data
